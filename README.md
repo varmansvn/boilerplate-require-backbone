@@ -1,5 +1,5 @@
 # How to install?
-npm instal
+npm install
 
 # How to run?
 node server.js
