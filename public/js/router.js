@@ -3,11 +3,10 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'models/PersonModel',
   'views/HomeView',
   'views/ContactView',
   'views/AboutView'
-], function($, _, Backbone, PersonModel, HomeView, ContactView, AboutView) {
+], function($, _, Backbone, HomeView, ContactView, AboutView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -32,11 +31,7 @@ define([
     });
 
     appRouter.on('route:defaultAction', function (action) {
-        
-        var person = new PersonModel({'firstname': 'A', 'lastname': 'B'});  
-
-        var homeView = new HomeView({model: person});
-
+        var homeView = new HomeView();
         homeView.render();
     });
 

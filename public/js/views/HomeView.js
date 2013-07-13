@@ -2,10 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/PersonView',
   'text!templates/HomeTemplate.html'
-], function($,_, Backbone, PersonView, 
-            HomeTemplate) {
+], function($,_, Backbone, HomeTemplate) {
   var HomeView = Backbone.View.extend({
     el: $('.jumbotron'),
     render: function(){
